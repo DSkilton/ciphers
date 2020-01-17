@@ -17,7 +17,7 @@ public class Sha256 {
     public static String cryptoLibrary(String originalInput) throws NoSuchAlgorithmException {
         String hashedString = null;
         MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
-        Cryptography.hash = messageDigest.digest(originalInput.getBytes(StandardCharsets.UTF_8));
+        CryptographyMain.hash = messageDigest.digest(originalInput.getBytes(StandardCharsets.UTF_8));
         return hashedString;
     }
 
