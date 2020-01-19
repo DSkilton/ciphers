@@ -24,16 +24,17 @@ public class CryptographyMain {
         
         /* The following need moving to the menu system. 
          * Consider changing public statics above to encapsulate them 
+         * finish classical menu and caeser cipher 
+         * move Sha256 code to class
          */
-        System.out.print("Input text to be hashed: "); 
-        plainText = sc.nextLine();
         
-        System.out.print("\nInput shift: "); 
-        int shift = sc.nextInt();
-        caeserCypher.ceaserCypher(plainText, shift);
-
-        Sha256.cryptoLibrary(plainText);
-        Sha256.byteToHex(hash);
+        MainMenu.mainMenu();
+        
+//        System.out.print("Input text to be hashed: "); 
+//        plainText = sc.nextLine();
+//
+//        Sha256.cryptoLibrary(plainText);
+//        Sha256.byteToHex(hash);
     }
     
     

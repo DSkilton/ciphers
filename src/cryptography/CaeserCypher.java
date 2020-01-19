@@ -5,14 +5,21 @@
  */
 package cryptography;
 
+import static cryptography.CryptographyMain.sc;
+
 /**
  *
  * @author MC03353
  */
-public class caeserCypher {
+public class CaeserCypher {
     
     public static String ceaserCypher(String plainText, int shift) {
-        StringBuilder cipherText = new StringBuilder(); 
+        StringBuilder cipherText = new StringBuilder();
+        
+        System.out.print("\nInput shift: "); 
+        
+        shift = sc.nextInt();
+        CaeserCypher.ceaserCypher(plainText, shift);
         
         for(int j=0; j<plainText.length(); j++){
             
@@ -22,7 +29,7 @@ public class caeserCypher {
             } else { char c = (char)((((int)plainText.charAt(j)) + shift - 97) % 26 + 97);
                 cipherText.append(c);
             }
-        }
+        }//end of for loop
         
         System.out.println("Plaintext: " + plainText);
         System.out.println("Shift: " + shift);
