@@ -5,8 +5,6 @@
  */
 package cryptography;
 
-import static cryptography.CryptographyMain.sc;
-
 /**
  *
  * @author MC03353
@@ -15,12 +13,7 @@ public class CaeserCypher {
     
     public static String ceaserCypher(String plainText, int shift) {
         StringBuilder cipherText = new StringBuilder();
-        
-        System.out.print("\nInput shift: "); 
-        
-        shift = sc.nextInt();
-        CaeserCypher.ceaserCypher(plainText, shift);
-        
+                
         for(int j=0; j<plainText.length(); j++){
             
             if(Character.isUpperCase(plainText.charAt(j))){
@@ -31,9 +24,9 @@ public class CaeserCypher {
             }
         }//end of for loop
         
-        System.out.println("Plaintext: " + plainText);
-        System.out.println("Shift: " + shift);
-        System.out.println("Ciphertext: " + cipherText.toString());
+        System.out.println("\nPlaintext: " + GetAndSet.getPlainText());
+        System.out.println("Shift: " + GetAndSet.getShift());
+        System.out.println("Ciphertext: " + cipherText.toString() + "\n");
         return cipherText.toString();
     }
 }
