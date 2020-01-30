@@ -5,6 +5,8 @@
  */
 package cryptography;
 
+import static java.lang.System.exit;
+
 /**
  *
  * @author Duncan Skilton
@@ -58,9 +60,9 @@ public class MainMenu {
             switch (menuNumber) {
                 case 1:
                     System.out.print("Enter a String to be encoded: ");
-                    GetAndSet.setPlainText(CryptographyMain.sc.nextLine());
+                    GetAndSet.setPlainText(CryptographyMain.sc.next());
                     CryptographyMain.sc.nextLine();
-                    
+                                        
                     System.out.print("Enter shift amount (int): ");
                     GetAndSet.setShift(CryptographyMain.sc.nextInt());
                     
@@ -70,6 +72,12 @@ public class MainMenu {
 //                    System.out.println("***************");
 
                     CaeserCypher.ceaserCypher(GetAndSet.getPlainText(), GetAndSet.getShift());
+                    break;
+                    
+                case 0:
+                    System.out.println("exit");
+                    exit(0);
+                    choice = true;
                     break;
                 default:
                     break;

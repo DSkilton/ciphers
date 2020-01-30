@@ -24,8 +24,8 @@ public class CaeserCypher {
             }
         }//end of for loop
         
-        System.out.println("\nPlaintext: " + GetAndSet.getPlainText());
-        System.out.println("Shift: " + GetAndSet.getShift());
+        System.out.println("\nPlaintext: " + plainText);
+        System.out.println("Shift: " + shift);
         System.out.println("Ciphertext: " + cipherText.toString() + "\n");
         return cipherText.toString();
     }
