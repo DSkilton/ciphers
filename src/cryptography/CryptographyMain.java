@@ -17,12 +17,10 @@ import java.util.Scanner;
 
 public class CryptographyMain {
     public static Scanner sc = new Scanner (System.in);// in the real world, you would not make this public
-    public static String plainText; //this could be encapsulated (written in a separate class and declared private) to restric access
-    public static byte[] hash; 
     
     public static void main(String[] args) throws NoSuchAlgorithmException {
         
-        /* The following need moving to the menu system. 
+        /* The following need moving to the menu methods. 
          * Consider changing public statics above to encapsulate them 
          * finish classical menu and caeser cipher 
          * move Sha256 code to class
@@ -30,9 +28,6 @@ public class CryptographyMain {
         
         MainMenu.mainMenu();
         
-//        System.out.print("Input text to be hashed: "); 
-//        plainText = sc.nextLine();
-//
 //        Sha256.cryptoLibrary(plainText);
 //        Sha256.byteToHex(hash);
     }

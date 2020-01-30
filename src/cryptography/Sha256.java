@@ -14,13 +14,6 @@ import java.security.NoSuchAlgorithmException;
  */
 public class Sha256 {
     
-    public static String cryptoLibrary(String originalInput) throws NoSuchAlgorithmException {
-        String hashedString = null;
-        MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
-        CryptographyMain.hash = messageDigest.digest(originalInput.getBytes(StandardCharsets.UTF_8));
-        return hashedString;
-    }
-
     public static String byteToHex(byte[] hash) {
         StringBuffer hexString = new StringBuffer();
         for (int i = 0; i < hash.length; i++) {

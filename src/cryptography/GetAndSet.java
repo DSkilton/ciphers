@@ -5,6 +5,10 @@
  */
 package cryptography;
 
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 /**
  *
  * @author MC03353
@@ -13,6 +17,7 @@ public class GetAndSet {
        
     private static String plainText;
     private static int shift;
+    private static byte[] hash;
 
     public GetAndSet(String plainText, int shift) {
         GetAndSet.plainText = plainText;
@@ -26,6 +31,8 @@ public class GetAndSet {
     public GetAndSet (int shift){
         GetAndSet.shift = shift;
     }
+    
+    
 
     public static String getPlainText() {
         return plainText;
@@ -42,9 +49,13 @@ public class GetAndSet {
     public static void setShift(int shift) {
         GetAndSet.shift = shift;
     }
-    
-    
-    
-    
-    
+
+    public static byte[] getHash() throws NoSuchAlgorithmException{
+        MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
+        return hash = messageDigest.digest(GetAndSet.getPlainText().getBytes(StandardCharsets.UTF_8));
+    }
+
+    public static void setHash(byte[] hash) {
+        GetAndSet.hash = hash;
+    }      
 }
