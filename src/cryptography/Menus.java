@@ -12,7 +12,7 @@ import java.security.NoSuchAlgorithmException;
  *
  * @author Duncan Skilton
  */
-public class MainMenu {
+public class Menus {
     
     static void mainMenu() throws NoSuchAlgorithmException{
         boolean choice = false;

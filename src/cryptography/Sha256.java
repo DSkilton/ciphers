@@ -4,9 +4,6 @@
  * and open the template in the editor.
  */
 package cryptography;
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 
 /**
  *
