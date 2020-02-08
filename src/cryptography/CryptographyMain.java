@@ -19,14 +19,9 @@ public class CryptographyMain {
     public static Scanner sc = new Scanner (System.in);// in the real world, you would not make this public
     
     public static void main(String[] args) throws NoSuchAlgorithmException, IOException {
+//        Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome https://charlesreid1.github.io/enigma-cipher-implementation-part-2-pseudocode.html"});
+        Menus.mainMenu();
         
-        /* The following need moving to the menu methods. 
-         * Consider changing public statics above to encapsulate them 
-         * finish classical menu and caeser cipher 
-         * move Sha256 code to class
-         */
-        Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome https://charlesreid1.github.io/enigma-cipher-implementation-part-2-pseudocode.html"});
-//        Menus.mainMenu();
         
     }
     

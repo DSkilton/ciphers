@@ -5,6 +5,8 @@
  */
 package cryptography;
 
+import cryptography.modern.Sha256;
+import cryptography.classical.CaeserCypher;
 import static java.lang.System.exit;
 import java.security.NoSuchAlgorithmException;
 
@@ -53,8 +55,8 @@ public class Menus {
         
             System.out.println("Choose one of the following: \n"
                     + "1. Caeser Cypher \n"
-                    + "2. TBC \n"
-                    + "3. Modern Cypher \n"
+                    + "2. At Bash \n"
+                    + "3. TBC \n"
                     + "0. Previous Menu \n");
 
             menuNumber = CryptographyMain.sc.nextInt();
@@ -74,7 +76,17 @@ public class Menus {
 //                    System.out.println("***************");
 
                     CaeserCypher.ceaserCypher(GetAndSet.getPlainText(), GetAndSet.getShift());
-                    break;                    
+                break;
+                case 2:
+                    System.out.print("Enter a String to be encoded: ");
+                    GetAndSet.setPlainText(CryptographyMain.sc.next());
+                    CryptographyMain.sc.nextLine();
+                                        
+                    System.out.print("Enter shift amount (int): ");
+                    GetAndSet.setShift(CryptographyMain.sc.nextInt());
+
+                    CaeserCypher.ceaserCypher(GetAndSet.getPlainText(), GetAndSet.getShift());
+                break;
                 case 0:
                     System.out.println("exit");
                     exit(0);
