@@ -9,8 +9,8 @@ package cryptography.classical;
  *
  * @author Duncan Skilton
  */
-public class atBash {
-    public String encode(String plainText){
+public class AtBash {
+    public static String atBash(String plainText){
         String cipherText = "";
         plainText = removeChars(plainText.toLowerCase());
         
@@ -21,22 +21,23 @@ public class atBash {
                 cipherText += c;
             }
         }
-        return getSubStrings(cipherText).trim();
+        return getSubStrings(cipherText);
     }//end of encode
     
-    private String getSubStrings(String input){
-        String out = "";
+    private static String getSubStrings(String input){
+        String cipherText = "";
         for(int i = 0; i < input.length(); i += 5){
             if(i + 5 <= input.length()){
-                out += (input.substring(i, i + 5) + " ");
+                cipherText += (input.substring(i, i + 5) + " ");
             } else {
-                out += (input.substring(i) + " ");
+                cipherText += (input.substring(i) + " ");
             }
         }            
-        return out;
+        System.out.println(cipherText);
+        return cipherText;
     }//end of getSubStrings
     
-    private String removeChars(String input){
+    private static String removeChars(String input){
         String out = " ";
         for(char c : input.toCharArray()){
             if(Character.isLetterOrDigit(c)){

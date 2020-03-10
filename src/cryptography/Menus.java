@@ -5,8 +5,10 @@
  */
 package cryptography;
 
+import cryptography.classical.AtBash;
 import cryptography.modern.Sha256;
 import cryptography.classical.CaeserCypher;
+import cryptography.classical.Rot13;
 import static java.lang.System.exit;
 import java.security.NoSuchAlgorithmException;
 
@@ -56,7 +58,7 @@ public class Menus {
             System.out.println("Choose one of the following: \n"
                     + "1. Caeser Cypher \n"
                     + "2. At Bash \n"
-                    + "3. TBC \n"
+                    + "3. ROT13 \n"
                     + "0. Previous Menu \n");
 
             menuNumber = CryptographyMain.sc.nextInt();
@@ -70,22 +72,20 @@ public class Menus {
                     System.out.print("Enter shift amount (int): ");
                     GetAndSet.setShift(CryptographyMain.sc.nextInt());
                     
-//                    System.out.println("***************");
-//                    System.out.println("\nThis should be plain text " + GetAndSet.getPlainText()); //TESTING GETTER      
-//                    System.out.println("\nThis should be shift " + GetAndSet.getShift()); //TESTING GETTER      
-//                    System.out.println("***************");
-
                     CaeserCypher.ceaserCypher(GetAndSet.getPlainText(), GetAndSet.getShift());
                 break;
                 case 2:
                     System.out.print("Enter a String to be encoded: ");
                     GetAndSet.setPlainText(CryptographyMain.sc.next());
                     CryptographyMain.sc.nextLine();
-                                        
-                    System.out.print("Enter shift amount (int): ");
-                    GetAndSet.setShift(CryptographyMain.sc.nextInt());
 
-                    CaeserCypher.ceaserCypher(GetAndSet.getPlainText(), GetAndSet.getShift());
+                    AtBash.atBash(GetAndSet.getPlainText());
+                break;
+                case 3:
+                    System.out.print("Enter a String to be encoded: ");
+                    GetAndSet.setPlainText(CryptographyMain.sc.next());
+                    CryptographyMain.sc.nextLine();
+                    Rot13.rot13(GetAndSet.getPlainText());
                 break;
                 case 0:
                     System.out.println("exit");

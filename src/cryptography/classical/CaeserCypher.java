@@ -10,7 +10,6 @@ package cryptography.classical;
  * @author MC03353
  */
 public class CaeserCypher {
-    
     public static String ceaserCypher(String plainText, int shift) {
         StringBuilder cipherText = new StringBuilder();
                 
