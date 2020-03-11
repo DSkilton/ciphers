@@ -38,7 +38,7 @@ public class AtBash {
     }//end of getSubStrings
     
     private static String removeChars(String input){
-        String out = " ";
+        String out = "";
         for(char c : input.toCharArray()){
             if(Character.isLetterOrDigit(c)){
                 out  += c;

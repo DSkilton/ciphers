@@ -11,12 +11,14 @@ import cryptography.classical.CaeserCypher;
 import cryptography.classical.Rot13;
 import static java.lang.System.exit;
 import java.security.NoSuchAlgorithmException;
+import java.util.Scanner;
 
 /**
  *
  * @author Duncan Skilton
  */
 public class Menus {
+    public static final Scanner SC = new Scanner(System.in);
     
     static void mainMenu() throws NoSuchAlgorithmException{
         boolean choice = false;
@@ -66,25 +68,25 @@ public class Menus {
             switch (menuNumber) {
                 case 1:
                     System.out.print("Enter a String to be encoded: ");
-                    GetAndSet.setPlainText(CryptographyMain.sc.next());
-                    CryptographyMain.sc.nextLine();
+                    GetAndSet.setPlainText(SC.nextLine());
+//                    SC.next();
                                         
                     System.out.print("Enter shift amount (int): ");
-                    GetAndSet.setShift(CryptographyMain.sc.nextInt());
+                    GetAndSet.setShift(SC.nextInt());
                     
                     CaeserCypher.ceaserCypher(GetAndSet.getPlainText(), GetAndSet.getShift());
                 break;
                 case 2:
                     System.out.print("Enter a String to be encoded: ");
-                    GetAndSet.setPlainText(CryptographyMain.sc.next());
-                    CryptographyMain.sc.nextLine();
-
+                    String plainText = SC.nextLine();
+                    GetAndSet.setPlainText(plainText);
+                    
                     AtBash.atBash(GetAndSet.getPlainText());
                 break;
                 case 3:
                     System.out.print("Enter a String to be encoded: ");
-                    GetAndSet.setPlainText(CryptographyMain.sc.next());
-                    CryptographyMain.sc.nextLine();
+                    GetAndSet.setPlainText(SC.next());
+                    SC.nextLine();
                     Rot13.rot13(GetAndSet.getPlainText());
                 break;
                 case 0:
