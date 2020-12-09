@@ -14,7 +14,6 @@ import java.security.NoSuchAlgorithmException;
  * @author MC03353
  */
 public class GetAndSet {
-       
     private static String plainText;
     private static int shift;
     private static byte[] hash;
@@ -30,9 +29,7 @@ public class GetAndSet {
     
     public GetAndSet (int shift){
         GetAndSet.shift = shift;
-    }
-    
-    
+    }  
 
     public static String getPlainText() {
         return plainText;
