@@ -10,13 +10,13 @@ import java.util.Scanner;
 
 /**
  *
- * @author MC03353
+ * @author Duncan Skilton
  */
 
 //        http://practicalcryptography.com/ciphers/
 
 public class CryptographyMain {
-    public static Scanner sc = new Scanner (System.in);// in the real world, you would not make this public
+    protected static Scanner sc = new Scanner (System.in);
     
     public static void main(String[] args) throws NoSuchAlgorithmException, IOException {
 //        Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome https://charlesreid1.github.io/enigma-cipher-implementation-part-2-pseudocode.html"});

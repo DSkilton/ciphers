@@ -68,26 +68,26 @@ public class Menus {
             switch (menuNumber) {
                 case 1:
                     System.out.print("Enter a String to be encoded: ");
-                    GetAndSet.setPlainText(SC.nextLine());
+                    PlainText.setPlainText(SC.nextLine());
 //                    SC.next();
                                         
                     System.out.print("Enter shift amount (int): ");
-                    GetAndSet.setShift(SC.nextInt());
+                    PlainText.setShift(SC.nextInt());
                     
-                    CaeserCypher.ceaserCypher(GetAndSet.getPlainText(), GetAndSet.getShift());
+                    CaeserCypher.ceaserCypher(PlainText.getPlainText(), PlainText.getShift());
                 break;
                 case 2:
                     System.out.print("Enter a String to be encoded: ");
                     String plainText = SC.nextLine();
-                    GetAndSet.setPlainText(plainText);
+                    PlainText.setPlainText(plainText);
                     
-                    AtBash.atBash(GetAndSet.getPlainText());
+                    AtBash.atBash(PlainText.getPlainText());
                 break;
                 case 3:
                     System.out.print("Enter a String to be encoded: ");
-                    GetAndSet.setPlainText(SC.next());
+                    PlainText.setPlainText(SC.next());
                     SC.nextLine();
-                    Rot13.rot13(GetAndSet.getPlainText());
+                    Rot13.rot13(PlainText.getPlainText());
                 break;
                 case 0:
                     System.out.println("exit");
@@ -106,10 +106,10 @@ public class Menus {
     
     static void modernMenu() throws NoSuchAlgorithmException{
         System.out.println("Enter a String to be encoded: ");
-        GetAndSet.setPlainText(CryptographyMain.sc.next());
+        PlainText.setPlainText(CryptographyMain.sc.next());
         CryptographyMain.sc.nextLine();
         System.out.println();
-        Sha256.byteToHex(GetAndSet.getHash());
+        Sha256.byteToHex(PlainText.getHash());
     }
     
 }

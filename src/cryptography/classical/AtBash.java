@@ -22,7 +22,7 @@ public class AtBash {
             }
         }
         return getSubStrings(cipherText);
-    }//end of encode
+    }
     
     private static String getSubStrings(String input){
         String cipherText = "";
@@ -35,7 +35,7 @@ public class AtBash {
         }            
         System.out.println(cipherText);
         return cipherText;
-    }//end of getSubStrings
+    }
     
     private static String removeChars(String input){
         String out = "";
@@ -46,4 +46,4 @@ public class AtBash {
         }
         return out;
     }
-}//end of class
+}
